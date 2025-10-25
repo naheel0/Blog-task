@@ -1,6 +1,6 @@
 // App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Change this line
 import CreateBlog from './components/createblog.jsx';
 import BlogList from './components/bloglist.jsx';
 import BlogDetail from './components/blogdetail.jsx';
@@ -8,13 +8,13 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router> {/* This now uses HashRouter */}
       <div className="App">
         <nav className="navbar">
           <h1>My Blog</h1>
           <div className="nav-links">
-            <a href="/createblog">Create Blog</a>
-            <a href="/blogs">All Blogs</a>
+            <a href="/#/createblog">Create Blog</a> {/* Update links too */}
+            <a href="/#/blogs">All Blogs</a>
           </div>
         </nav>
         
